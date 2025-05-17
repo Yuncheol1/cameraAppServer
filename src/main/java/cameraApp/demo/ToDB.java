@@ -1,3 +1,4 @@
+/*
 package cameraApp.demo;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -104,3 +105,4 @@ public class ToDB
 }
 
 
+*/

@@ -11,19 +11,19 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class DemoApplication {
-	static ToDB db;
+	//static ToDB db;
 	private Process ngrokProcess;
 
 	public static void main(String[] args) throws SQLException, IOException {
 		SpringApplication.run(DemoApplication.class, args);
-		db = new ToDB();
+	//	db = new ToDB();
 	}
 
 	@Bean
 	public ApplicationRunner runNgrokOnStartup() {
 		return args -> {
 			try {
-				ProcessBuilder pb = new ProcessBuilder("ngrok", "http", "--url=driven-goldfish-needlessly.ngrok-free.app", "80");
+				ProcessBuilder pb = new ProcessBuilder("ngrok", "http", "--url=harmless-lacewing-freely.ngrok-free.app", "80");
 				pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
 				pb.redirectError(ProcessBuilder.Redirect.INHERIT);
 				ngrokProcess = pb.start();
